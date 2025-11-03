@@ -2,7 +2,7 @@
 
 This is a simple MQTT Example for CocoLinx device.
 
-Download [MQTT Explorer](https://mqtt-explorer.com/) to test MQTT.
+Download [MQTT Explorer](https://mqtt-explorer.com/) to test MQTT connection.
 
 -----
 ### Setup

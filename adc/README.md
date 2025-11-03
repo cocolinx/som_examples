@@ -2,7 +2,7 @@
 
 This is a simple ADC Example for CocoLinx device.
 
-This example used NRF_SAADC_INPUT_AIN2(p0.15) to measure analog data.
+This example use NRF_SAADC_INPUT_AIN2(p0.15) to measure analog data.
 
 -----
 ### Setup
