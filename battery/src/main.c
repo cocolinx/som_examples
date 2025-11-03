@@ -8,7 +8,10 @@ LOG_MODULE_REGISTER(main);
 
 int main(void)
 {
-    nrf_modem_lib_init();
+    int err;
+    err = nrf_modem_lib_init();
+    if(err < 0)
+        LOG_ERR("Unable to initialize modem lib. (err: %d)", err);
     
     LOG_INF("=====Battery Voltage Sample=====");
     
@@ -16,7 +19,11 @@ int main(void)
     
     /* Get battery voltage */
     int voltage = 0;
-    modem_info_get_batt_voltage(&voltage);
+    err = modem_info_get_batt_voltage(&voltage);
+    if(err < 0) {
+        LOG_ERR("Failed to read battery voltage %d" err);
+        return 0;
+    }
     LOG_INF("Battery Voltage: %d mV", voltage);
 
     return 0;

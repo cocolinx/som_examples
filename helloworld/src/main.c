@@ -6,7 +6,10 @@ LOG_MODULE_REGISTER(main_helloworld, CONFIG_LOG_DEFAULT_LEVEL);
 
 int main(void)
 {
-    nrf_modem_lib_init();
+    int err;
+    err = nrf_modem_lib_init();
+    if(err < 0)
+        LOG_ERR("Unable to initialize modem lib. (err: %i)", err);
     
     LOG_INF("Hello World");
 
