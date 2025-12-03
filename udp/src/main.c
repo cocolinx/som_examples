@@ -5,7 +5,7 @@
 #include <zephyr/net/socket.h>
 #include <zephyr/net/net_ip.h>
 
-LOG_MODULE_REGISTER(main_udp, CONFIG_LOG_DEFAULT_LEVEL);
+LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 
 static K_SEM_DEFINE(udpsem_start, 0, 1);
 

@@ -2,7 +2,7 @@
 #include <zephyr/logging/log.h> 
 #include <modem/nrf_modem_lib.h>
 
-LOG_MODULE_REGISTER(main_helloworld, CONFIG_LOG_DEFAULT_LEVEL);
+LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 
 int main(void)
 {

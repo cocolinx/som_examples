@@ -8,7 +8,7 @@
 /* prevent chattering */
 #define DEBOUNCE_MS 20
 
-LOG_MODULE_REGISTER(main_button, CONFIG_LOG_DEFAULT_LEVEL);
+LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(button0), gpios);
 
 static void btn_debounce_work_handler(struct k_work *work);

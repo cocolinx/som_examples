@@ -11,7 +11,7 @@
 #define PIN_LED_1 24
 #define PIN_LED_2 25
 
-LOG_MODULE_REGISTER(main_blinky, CONFIG_LOG_DEFAULT_LEVEL);
+LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 
 static const struct device *leds = DEVICE_DT_GET(DT_NODELABEL(gpio0));
 

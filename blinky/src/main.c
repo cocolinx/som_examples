@@ -20,6 +20,7 @@ int main(void)
         LOG_ERR("LED device not ready");
         return 0;
     }
+    
     err = gpio_pin_configure_dt(&led0, GPIO_OUTPUT_INACTIVE);
     if(err < 0) 
     {

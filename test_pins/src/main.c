@@ -7,7 +7,7 @@
 
 #define STEP_DELAY_MS  5 
 
-LOG_MODULE_REGISTER(main_pins, CONFIG_LOG_DEFAULT_LEVEL);
+LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 
 static const uint8_t PINS[] = {
     8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 28, 29, 30, 31

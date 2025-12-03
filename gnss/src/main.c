@@ -6,7 +6,7 @@
 #include <modem/nrf_modem_lib.h>
 #include <modem/lte_lc.h>
 
-LOG_MODULE_REGISTER(main_gnss, CONFIG_LOG_DEFAULT_LEVEL);
+LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 
 static struct nrf_modem_gnss_nmea_data_frame gnss_nmea_data;
 static struct nrf_modem_gnss_pvt_data_frame agnss_data;
