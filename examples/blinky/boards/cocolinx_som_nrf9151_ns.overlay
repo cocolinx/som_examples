@@ -1,0 +1,19 @@
+/*
+ * Copyright (c) 2026 CocoLinx
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+ / {
+
+	leds {
+		compatible = "gpio-leds";
+		led0: led_0 {
+			gpios = <&gpio0 23 GPIO_ACTIVE_LOW>;
+			label = "led0";
+		};
+	};
+	aliases {
+		led0 = &led0;
+	};
+};
