@@ -196,7 +196,7 @@ int main(void)
     sa.sin_family = AF_INET;
     sa.sin_port = htons(1883);
 
-    err = zsock_getaddrinfo("test.mosquitto.org", NULL, &hints, &res); /* get ip address */
+    err = zsock_getaddrinfo("echo.cocolinx.com", NULL, &hints, &res); /* get ip address */
     if(err) {
         LOG_ERR("Failed to get addr info %d", err);
         return 0;
