@@ -108,7 +108,7 @@ static void mqtt_evt_handler(struct mqtt_client *const client, const struct mqtt
                 struct mqtt_pubrel_param param = {
                     .message_id = evt->param.pubrec.message_id
                 };
-                ret = mqtt_publish_qos2_release(&client, &param);
+                ret = mqtt_publish_qos2_release(client, &param);
                 if (ret) {
                     LOG_ERR("mqtt_publish_qos2_release: Fail! %d", ret);
                 } else {
@@ -126,7 +126,7 @@ static void mqtt_evt_handler(struct mqtt_client *const client, const struct mqtt
                 struct mqtt_pubcomp_param param = {
                     .message_id = evt->param.pubrel.message_id
                 };
-                ret = mqtt_publish_qos2_complete(&client, &param);
+                ret = mqtt_publish_qos2_complete(client, &param);
                 if (ret) {
                     LOG_ERR("mqtt_publish_qos2_complete Failed:%d", ret);
                 } else {
