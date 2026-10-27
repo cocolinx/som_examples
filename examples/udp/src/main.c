@@ -32,11 +32,15 @@ int main(void)
         .ai_socktype = SOCK_STREAM
     };
 
+    LOG_INF("lte connecting...");
+
     err = lte_lc_connect();
     if(err < 0) {
         LOG_ERR("Failed to connect lte %d", err);
         return 0;
     }
+
+    LOG_INF("lte connected!");
 
     socknum = zsock_socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
     if(socknum < 0) {
@@ -55,6 +59,8 @@ int main(void)
     sa.sin_addr = ((struct sockaddr_in *)res->ai_addr)->sin_addr;
     zsock_freeaddrinfo(res);
      
+    LOG_INF("udp connecting...");
+
 	err = zsock_connect(socknum, (struct sockaddr *)&sa, sizeof(struct sockaddr_in));
 	if(err < 0) {
 		LOG_ERR("connect failed:%d", -errno);

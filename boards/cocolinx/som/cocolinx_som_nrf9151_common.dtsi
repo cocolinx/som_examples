@@ -41,37 +41,5 @@
 	pinctrl-names = "default", "sleep";
 };
 
-&uart1 {
-	status = "okay";
-	current-speed = <115200>;
-	pinctrl-0 = <&uart1_default>;
-	pinctrl-1 = <&uart1_sleep>;
-	pinctrl-names = "default", "sleep";
-};
-
-&spi3 {
-	compatible = "nordic,nrf-spim";
-	status = "okay";
-	cs-gpios = < &gpio0 30 GPIO_ACTIVE_LOW >;
-	pinctrl-0 = <&spi3_default>;
-	pinctrl-1 = <&spi3_sleep>;
-	pinctrl-names = "default", "sleep";	
-};
-
-&i2c1 {
-	compatible = "nordic,nrf-twim";
-	status = "okay";
-	pinctrl-0 = <&i2c1_default>;
-	pinctrl-1 = <&i2c1_sleep>;
-	pinctrl-names = "default", "sleep";
-};
-
-&pwm0 {
-	status = "okay";
-	pinctrl-0 = <&pwm0_default>;
-	pinctrl-1 = <&pwm0_sleep>;
-	pinctrl-names = "default", "sleep";
-};
-
 /* Include default memory partition configuration file */
 #include <nordic/nrf91xx_partition.dtsi>

@@ -1,19 +1,25 @@
 /*
- * Copyright (c) 2026 cocolinx
+ * Copyright (c) 2024 Nordic Semiconductor ASA
  *
- * SPDX-License-Identifier: Apache-2.0
+ * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
  */
 
+#include <samples/cellular/nrf91_no_bootloader_partitions.dtsi>
+#include <samples/cellular/nrf91_sram_partitions.dtsi>
+
 / {
-	buttons {
-		compatible = "gpio-keys";
-		button0: button_0 {
-			gpios = <&gpio0 18 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "button0";
-			zephyr,code = <INPUT_KEY_0>;
-		};
-	};
-	aliases {
-		button0 = &button0;
-	};
+
+    buttons {
+        compatible = "gpio-keys";
+
+        button0: button_0 {
+            gpios = <&gpio0 18 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "button0";
+            zephyr,code = <INPUT_KEY_0>;
+        };
+    };
+
+    aliases {
+        button0 = &button0;
+    };
 };

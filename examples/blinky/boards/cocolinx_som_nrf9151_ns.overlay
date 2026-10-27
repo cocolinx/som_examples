@@ -1,19 +1,23 @@
 /*
- * Copyright (c) 2026 CocoLinx
+ * Copyright (c) 2024 Nordic Semiconductor ASA
  *
- * SPDX-License-Identifier: Apache-2.0
+ * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
  */
 
- / {
+#include <samples/cellular/nrf91_no_bootloader_partitions.dtsi>
+#include <samples/cellular/nrf91_sram_partitions.dtsi>
 
-	leds {
-		compatible = "gpio-leds";
-		led0: led_0 {
-			gpios = <&gpio0 23 GPIO_ACTIVE_LOW>;
-			label = "led0";
-		};
-	};
-	aliases {
-		led0 = &led0;
-	};
+/ {
+    leds {
+        compatible = "gpio-leds";
+
+        led0: led_0 {
+            gpios = <&gpio0 23 GPIO_ACTIVE_LOW>;
+            label = "led0";
+        };
+    };
+
+    aliases {
+        led0 = &led0;
+    };
 };
